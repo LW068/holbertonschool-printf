@@ -14,5 +14,6 @@ int _printf(const char *format, ...)
 
 # Collaborators
 
-@LW068 (Ricardo Corona)
-@MicoBledsoe (Mico Bledsoe)
+@LW068 (Ricardo Corona).
+
+@MicoBledsoe (Mico Bledsoe).
