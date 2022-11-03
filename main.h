@@ -12,7 +12,7 @@
 /* Documentation */
 
 /**
- * struct va - a struct that holds va_list
+ * struct va- a struct that holds va_list
  * @let: character
  * @func: pointer to a function
  *
