@@ -1,6 +1,3 @@
-<< HEAD >>
-int _printf(c
-=======
 #ifndef MAIN_H
 #define MAIN_H
 
@@ -37,6 +34,5 @@ int print_str(va_list ap);
 int print_int(va_list ap);
 int print_unsigned_int(unsigned int n);
 int _putchar(char c);
->>>>>>> 169fe97ef66cafd8737ae0b31c0ebd08620d9fbb
 
 #endif /* MAIN_H */
