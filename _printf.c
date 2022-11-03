@@ -1,9 +1,7 @@
 #include "main.h"
-
 /**
- * _printf - outputs according to formatting.
- *
- * @format: a string of characters.
+ * _printf - a fucntion that produces output according to the format
+ * @format: a string that keeps what  will be printed
  * Return: NULL
  */
 int _printf(const char *format, ...)

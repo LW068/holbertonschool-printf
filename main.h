@@ -9,7 +9,7 @@
 #include <stdarg.h>
 #include <unistd.h>
 
-/* Documentation */
+/* Documentations */
 
 /**
  * struct format - a struct that holds va_list
