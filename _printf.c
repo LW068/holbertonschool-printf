@@ -1,52 +1,58 @@
 #include "main.h"
-#include <stdarg.h>
-
 /**
- *_printf - produces the output according to formatting.
- *@format: Input string with format char
- *
- * Return: Count of Characters printed
+ * _printf - produces the output according to formatting.
+ * @format: string that holds what will be printed
+ * Return: NULL
  */
 int _printf(const char *format, ...)
 {
-	va_list args;
-	int charSum = 0, index = 0;
+	va_list ap;
+	int i = 0, charCount = 0;
 
-	if (format == NULL)
+	if (format == NULL || (format[i] == '%' && !format[i + 1]))
 		return (-1);
-	va_start(args, format);
-	while (format[index] != '\0')
+	va_start(ap, format);
+	for (i = 0; format[i]; i++)
 	{
-		if (format[index] != '%')
+		if (format[i] == '%' && (format[i + 1] == 0 || format[i + 1] == '%'))
 		{
-			charSum += printChar(format[index++]);
-			continue;
+			_putchar('%');
+			i++;
+			charCount++;
 		}
-		index++;
-		skipFlags(&index, format);
-		switch (format[index])
+		else if (format[i] == '%')
 		{
-		case 'c':
-			charSum += printChar(va_arg(args, int));
-			break;
-		case 's':
-			charSum += printString(va_arg(args, char *));
-			break;
-		case '%':
-			charSum += printChar('%');
-			break;
-		case 'd':
-		case 'i':
-			charSum += printInt(va_arg(args, int));
-			break;
-		case '\0':
-			return (-1);
-		default:
-			charSum += printChar('%');
-			charSum += printChar(format[index]);
-		} /* Increment index past the format char */
-		index++;
+			charCount += map_func(ap, format[i + 1]);
+			i++;
+		}
+		else
+		{
+			charCount += 1;
+			_putchar(format[i]);
+		}
 	}
-	va_end(args);
-	return (charSum);
+	va_end(ap);
+	return (charCount);
+}
+/**
+ * map_func - maps format specifiers to functions
+ * @ap: va_list that contains args
+ * @c: char (format i + 1)
+ * Return: 2 (number of characters printed)
+ */
+int map_func(va_list ap, char c)
+{
+	int j;
+	format_t f[] = {
+		{"c", print_char},
+		{"s", print_str},
+		{"d", print_int},
+		{"i", print_int}
+	};
+	for (j = 0; j < 4; j++)
+		if (*f[j].let == c)
+			return (f[j].func(ap));
+	_putchar('%');
+	_putchar(c);
+	return (2);
 }
