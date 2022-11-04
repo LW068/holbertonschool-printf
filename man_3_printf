@@ -1,0 +1,23 @@
+- NAME
+    _printf - formatted output conversion
+- SYNOPSIS
+    #include "main.h"
+
+    int _printf(const char *format, ...);
+- DESCRIPTION
+    The _printf function takes a format string to print formatted output to the standard output stream. The format string utilizes conversion specifiers to determine the formatting. This _printf function does not handle flag characters, field width, precision, or length modifiers.
+
+    The conversion specifiers are c, s, d, and i. 'C' will output formatted characters converted from integers. 'S' will output a formatted string. 'D' will output formatted integers. 'I' will output formatted integers.
+
+    If _printf is successful, then it returns the number of characters printed with the exception of the null byte. A negative value is returned if _printf is not successful.
+EXAMPLES
+    #include "main.h"
+
+    _printf("Hello World");
+    Some examples of common usage.
+- SEE ALSO
+    _putchar
+- BUGS
+    No known bugs.
+- AUTHOR
+    Ricardo Corona & Mico Bledsoe
