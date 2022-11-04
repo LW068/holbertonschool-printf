@@ -20,7 +20,15 @@ int print_str(va_list ap)
 	int i;
 
 	if (str == NULL)
-		str = "(null)";
+	{
+		i = 6;
+		_putchar('(');
+		_putchar('n');
+		_putchar('u');
+		_putchar('l');
+		_putchar('l');
+		_putchar(')');
+	}
 	else
 	{
 		for (i = 0; str[i]; i++)
