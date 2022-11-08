@@ -8,7 +8,7 @@ The printf() (print formatted) function produces output according to a format st
 
 This project mimicks the operation of the normal printf function. Specifically, function is to be able to print strings, characters, and values to standard output without a need for the standard library.
 
-## Format Specifiers
+## Format Specifiers:
 ``` 
 c: print a single character
 d: print a decimal (base 10) number
@@ -26,7 +26,7 @@ int _printf(const char *format, ...)
 
 <img width="889" alt="PNG image" src="https://user-images.githubusercontent.com/108279441/200658620-f8286f0f-4a9a-4dbb-80b3-c6f99aeb0d7d.png">
 
-## Collaborators
+## Collaborators:
 
 @LW068 (Ricardo Corona).
 
