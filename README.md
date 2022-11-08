@@ -20,7 +20,6 @@ s: print a string of characters
 
 ```
 int _printf(const char *format, ...)
-
 ```
 ## Flowchart:
 
