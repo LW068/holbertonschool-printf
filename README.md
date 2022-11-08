@@ -23,7 +23,6 @@ int _printf(const char *format, ...)
 ```
 
 ## Collaborators
-...
 
 @LW068 (Ricardo Corona).
 
