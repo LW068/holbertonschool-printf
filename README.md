@@ -20,6 +20,13 @@ s: print a string of characters
 
 ```
 int _printf(const char *format, ...)
+
+```
+## Flowchart:
+
+```
+<img width="889" alt="PNG image" src="https://user-images.githubusercontent.com/108279441/200658620-f8286f0f-4a9a-4dbb-80b3-c6f99aeb0d7d.png">
+
 ```
 
 ## Collaborators
