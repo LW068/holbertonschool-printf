@@ -27,6 +27,6 @@ int _printf(const char *format, ...)
 
 ## Collaborators:
 
-@LW068 (Ricardo Corona).
+@LW068 (Ricardo Corona)
 
-@MicoBledsoe (Mico Bledsoe).
+@MicoBledsoe (Mico Bledsoe)
